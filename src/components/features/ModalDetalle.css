@@ -1,0 +1,105 @@
+/* El fondo oscuro que tapa toda la web */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Oscuro semi-transparente */
+  backdrop-filter: blur(5px); /* Desenfoque elegante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Siempre por encima de todo */
+  padding: 20px;
+}
+
+/* La caja blanca del producto */
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  height: 85vh; /* Ocupa el 85% de la altura de la pantalla */
+  display: flex;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden; /* Para que nada se salga de los bordes redondeados */
+  position: relative;
+}
+
+/* COLUMNA IZQUIERDA: La Foto */
+.modal-image-col {
+  flex: 1.2; /* Ocupa un poco más de la mitad */
+  background-color: #f4f4f4;
+}
+
+.modal-image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La imagen llena el espacio sin deformarse */
+}
+
+/* COLUMNA DERECHA: La Info */
+.modal-info-col {
+  flex: 1; /* El resto del espacio */
+  padding: 40px;
+  overflow-y: auto; /* Si hay mucho texto, que se pueda hacer scroll aquí */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botón de cerrar (X) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  color: #111;
+}
+
+/* Tipografía del Modal */
+.modal-equipo {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.modal-temporada {
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.modal-precio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.modal-descripcion {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Estilos para el botón de comprar */
+.btn-comprar {
+  background-color: #111;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: auto; /* Empuja el botón al final si hay espacio */
+}
+
+.btn-comprar:hover {
+  background-color: #333;
+}

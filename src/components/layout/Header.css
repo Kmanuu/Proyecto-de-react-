@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 80px; /* Un poco más alto para estilo moderno */
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95); /* Casi blanco sólido */
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+.header-brand {
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.header-group {
+  display: flex;
+  gap: 20px;
+  flex: 1; /* Ocupan el mismo espacio para centrar el logo */
+}
+
+/* Alineamos el grupo de la derecha al final */
+.right {
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #111;
+  transition: opacity 0.3s;
+  display: flex; /* Para centrar el icono */
+}
+
+.icon-btn:hover {
+  opacity: 0.6;
+}
+
+/* El círculo rojo del contador */
+.relative {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: black;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

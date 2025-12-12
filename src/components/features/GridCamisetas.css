@@ -1,0 +1,75 @@
+/* Contenedor principal de la rejilla */
+
+.grid-container {
+  display: grid;
+  /* Mantenemos el auto-fill para que sea responsive */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+  /* CAMBIO AQUÍ: Aumentamos el espacio entre tarjetas */
+  column-gap: 40px; /* Antes era 10px, ahora respiran más */
+  row-gap: 60px;    /* Antes era 40px, separamos más las filas */
+  
+  width: 100%;
+  padding: 20px; /* Un poco de margen interior al contenedor no viene mal */
+}
+
+
+/* La tarjeta individual */
+.card {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* El marco de la foto */
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Proporción vertical típica de moda */
+  overflow: hidden;    /* Para que el zoom no se salga del marco */
+  background-color: #f3f3f3; /* Color de fondo mientras carga */
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* La imagen en sí */
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease; /* Suavidad al hacer hover */
+  display: block;
+}
+
+/* Efecto ZOOM al pasar el ratón (muy típico de estas tiendas) */
+.card:hover .card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Información del producto (Debajo de la foto) */
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.8rem; /* Texto pequeño y elegante */
+  color: #000;
+}
+
+.card-title {
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase; /* Todo mayúsculas */
+  letter-spacing: 0.5px;
+}
+
+.card-subtitle {
+  margin: 4px 0 0 0;
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.card-price {
+  font-weight: 600;
+  margin-left: 10px;
+}

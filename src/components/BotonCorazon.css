@@ -1,0 +1,26 @@
+.corazon-boton {
+    position: absolute; /* Esto permite colocarlo donde queramos dentro de la foto */
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.3s;
+    z-index: 10; /* Asegura que esté por encima de la imagen */
+}
+
+.corazon-boton:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.corazon-boton.activo {
+    background: white; /* Fondo blanco si está activo */
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-light: #f9f9f9;
+  --color-gray-medium: #888888;
+  --color-border: #e5e5e5;
+  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Estilos base para botones e inputs */
+button { font-family: inherit; cursor: pointer; border: none; background: none; padding: 0; }
+input, select { font-family: inherit; outline: none; }

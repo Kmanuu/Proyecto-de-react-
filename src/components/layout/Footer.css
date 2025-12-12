@@ -1,0 +1,46 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 3rem 1rem 1rem;
+  margin-top: auto; /* Mantiene el footer en la parte inferior de la página */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.footer-section li:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
