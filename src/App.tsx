@@ -17,7 +17,7 @@ const App = () => {
   // ESTADO COMPARTIDO: El Carrito
   const [carrito, setCarrito] = useState(0);
 
-  // ESTADO VISUAL: ¿Qué producto estamos viendo en el modal?
+  // ESTADO VISUAL: ¿Hay una camiseta seleccionada ahora mismo?
   const [productoSeleccionado, setProductoSeleccionado] = useState<Camiseta | null>(null);
 
   // Callback: Función para sumar al carrito
