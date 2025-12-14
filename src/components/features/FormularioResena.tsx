@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import "./FormularioResena.css"; // Asegúrate de tener este CSS o usa './CommentsForm.css' si no lo cambiaste
+import "./FormularioResena.css"; 
 import Boton from "../Boton"; // Importamos el botón reutilizable
 
 interface FormularioResenaProps {
