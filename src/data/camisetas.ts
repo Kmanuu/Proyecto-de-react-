@@ -53,7 +53,7 @@ export const camisetas: Camiseta[] = [
     temporada: "2000",
     precio: 115,
     imagen: "/images/boca.jpg",
-    descripcion: "La azul y oro de la época dorada de Riquelme y Palermo.",
+    descripcion: "La azul y oro de la época dorada de Riquelme y Palermo. Azul y Oro puestos para la música, el brillo en la oscuridad",
     tallas: ["L", "XL", "XXL"],
     resenas: []
   },

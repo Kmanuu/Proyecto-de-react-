@@ -8,7 +8,7 @@ import { camisetas as dataInicial, type Camiseta } from './data/camisetas';
 import Header from './components/layout/Header';
 import GridCamisetas from './components/features/GridCamisetas';
 import Footer from './components/layout/Footer'; 
-import ModalDetalle from './components/features/ModalDetalle'; // Asegúrate de que la ruta sea correcta (features o layout según donde lo tengas)
+import ModalDetalle from './components/features/ModalDetalle'; 
 
 const App = () => {
   // 1. Convertimos los datos fijos en ESTADO para poder modificarlos (añadir reseñas)

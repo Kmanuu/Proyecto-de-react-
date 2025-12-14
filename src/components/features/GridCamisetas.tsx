@@ -7,7 +7,7 @@ interface GridProps {
   onSeleccionar: (camiseta: Camiseta) => void;
 }
 
-// La clase GridCamisetas recorre la lista y 
+// La clase GridCamisetas recorre la lista 
 export default function GridCamisetas({ camisetas, onSeleccionar }: GridProps) {
   return (
     <div className="grid-container">
