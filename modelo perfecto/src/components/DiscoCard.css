@@ -1,0 +1,37 @@
+.disco-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.disco-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+  border-color: #00c6ff;
+}
+
+.disco-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.disco-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.disco-info p {
+  margin: 4px 0 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}

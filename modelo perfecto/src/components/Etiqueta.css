@@ -1,0 +1,9 @@
+.etiqueta {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+.etiqueta.gris { background: #333; color: #ccc; }
+.etiqueta.azul { background: #0055ff; color: white; }

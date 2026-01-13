@@ -1,0 +1,22 @@
+.etiqueta {
+  padding: 4px 12px;       /* Relleno para que respire */
+  border-radius: 20px;     /* Bordes muy redondos */
+  font-size: 0.85rem;      /* Letra un pelín pequeña */
+  font-weight: 600;        /* Letra negrita */
+  display: inline-block;   /* Para que se comporte como un bloque en línea */
+  margin-right: 8px;       /* Separación si pones varias juntas */
+}
+
+/* Estilo por defecto (Gris oscuro) */
+.etiqueta.gris {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+/* Estilo destacado (Azul eléctrico) */
+.etiqueta.azul {
+  background-color: rgba(0, 198, 255, 0.2); /* Azul transparente */
+  color: #00c6ff;
+  border: 1px solid rgba(0, 198, 255, 0.5);
+}
