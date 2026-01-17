@@ -1,6 +1,8 @@
 import './App.css'
+import Boton from './components/Boton'
 // 1. Importamos el header
 import HeaderAlbum from './components/Header'
+import LikesButton from './components/Like'
 
 function App() {
   return (
@@ -13,9 +15,10 @@ function App() {
           
           {/* COLUMNA IZQUIERDA: Aquí irán tus Discos */}
           <section className="left-panel">
-            <h2>🎵 Mi Colección</h2>
+            <h2>🎵 Biblioteca de Álbumes</h2>
             <div className="caja-vacia">
-              Aquí cargaremos la lista de discos...
+              <Boton texto="Añadir +" 
+              />
             </div>
           </section>
 
@@ -24,6 +27,8 @@ function App() {
             <h2>📋 Detalles</h2>
             <div className="caja-vacia">
               Selecciona un disco para ver la info...
+              <LikesButton />
+              <Boton texto="hola" />
             </div>
           </section>
 
