@@ -1,21 +1,22 @@
-import { useState } from "react";
-import './Like.css'; 
+import React, { useState } from "react";
+import "./Like.css";
 
-function LikesButton() {
-    // 1. ESTADO: Empieza en 0
-    const [likes, setLikes] = useState(0);
+export default function BotonCorazon() {
+    const [deseado, setDeseado] = useState(false);
 
-    // 2. FUNCIÓN: Suma 1 cada vez que tocas
-    function handleClick() {
-        setLikes(likes + 1);
+    function handleClick(e: React.MouseEvent) {
+        // ESTO ES LA CLAVE: Evita que el clic "atraviese" el botón 
+        // y active el onClick de la tarjeta (abriendo el modal sin querer)
+        e.stopPropagation(); 
+        setDeseado(!deseado);
     }
 
-    // 3. RENDER: Botón con el número de likes
     return (
-        <button className="boton-like-profe" onClick={handleClick}>
-            {likes} 👍
+        <button 
+            className={`corazon-boton ${deseado ? 'activo' : ''}`} 
+            onClick={handleClick}
+        >
+            {deseado ? "❤️" : "🤍"} 
         </button>
-    )
+    );
 }
-
-export default LikesButton;
