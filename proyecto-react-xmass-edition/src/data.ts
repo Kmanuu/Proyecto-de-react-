@@ -10,7 +10,7 @@ export interface Disco {
 }
 
 // 2. Exportamos los datos usando ese molde
-export const discosData: Disco[] = [
+export const discos: Disco[] = [
   {
     id: 1,
     titulo: "Super Sangre Joven",

@@ -1,0 +1,94 @@
+/* --- ESTADO VACÍO (Cuando no has seleccionado nada) --- */
+.detalle-vacio {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.detalle-lleno {
+  position: relative; /* Para que lo de dentro se pueda colocar encima */
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Para que el fondo borroso no se salga por los bordes */
+  color: white;
+}
+
+/* --- EL TRUCO DEL FONDO BORROSO --- */
+.fondo-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  /* El truco: mucho blur y bajamos brillo para que el texto blanco se lea */
+  filter: blur(30px) brightness(0.25); 
+  z-index: 0; /* Al fondo del todo */
+  transform: scale(1.1); /* Hacemos zoom para evitar bordes blancos por el blur */
+}
+
+/* --- EL CONTENIDO REAL (Lo que va encima) --- */
+.contenido-real {
+  position: relative;
+  z-index: 1; /* Encima del fondo */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado todo */
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto; /* Si el texto es muy largo, que haga scroll */
+}
+
+/* --- PORTADA GRANDE --- */
+.portada-grande {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra elegante */
+  margin-bottom: 20px;
+}
+
+/* --- TEXTOS --- */
+h1 {
+  margin: 10px 0 5px 0;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.artista-subtitulo {
+  margin: 0 0 20px 0;
+  color: #ccc;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+/* --- ETIQUETAS Y BOTONES --- */
+.lista-etiquetas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.descripcion {
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 600px; /* Que no se haga eterno de leer */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.zona-acciones {
+  margin-top: auto; /* Empuja el like hacia abajo si sobra espacio */
+  padding-bottom: 20px;
+}

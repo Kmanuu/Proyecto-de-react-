@@ -1,0 +1,65 @@
+.formulario-disco {
+  background-color: #2a2a2a; /* Gris oscuro elegante */
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  max-width: 400px;
+  margin: 0 auto; /* Centrado */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.formulario-disco h2 {
+  margin-top: 0;
+  color: #61dafb; /* Azul React */
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #bbb;
+}
+
+.campo input, .campo textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: white;
+  box-sizing: border-box; /* Para que el padding no rompa el ancho */
+}
+
+.campo input:focus, .campo textarea:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+.fila-doble {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-guardar {
+  width: 100%;
+  padding: 12px;
+  background-color: #61dafb;
+  color: #222;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-guardar:hover {
+  background-color: #4fa8c7;
+}
