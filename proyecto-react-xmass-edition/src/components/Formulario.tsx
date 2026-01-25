@@ -6,13 +6,23 @@ import Boton from './Boton';
 interface FormProps {
   // Función que nos pasa el padre para entregarle el disco nuevo
   alGuardar: (nuevoDisco: Disco) => void; 
+  
+}
+
+interface DatosFormulario {
+  titulo: string;
+  artista: string;
+  anio: number;
+  genero: string;
+  descripcion: string;
+  portada: string;
 }
 
 export default function Formulario({ alGuardar }: FormProps) {
   
   // 1. EL ESTADO (La Memoria del Formulario)
   // Guardamos todos los campos en un solo objeto para no tener 6 variables sueltas.
-  const [datos, setDatos] = useState({
+  const [datos, setDatos ] = useState<DatosFormulario>({ 
     titulo: '',
     artista: '',
     anio: 2024,
