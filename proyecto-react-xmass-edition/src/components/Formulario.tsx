@@ -33,6 +33,7 @@ export default function Formulario({ alGuardar }: FormProps) {
 
   // 2.Una función para gobernarlos a todos
   // En vez de hacer un onChange para cada input, usamos el "name" del input.
+  // etiqueta de TypeScript que avisa al código de que este evento viene de escribir en un Input o en un Textarea, para que nos deje leer su valor sin dar error
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setDatos({
@@ -43,11 +44,11 @@ export default function Formulario({ alGuardar }: FormProps) {
 
   // 3. EL ENVÍO (Cuando pulsas "Guardar")
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // IMPORTANTE: Evita que la página se recargue (lo típico de HTML viejo)
+    e.preventDefault(); // IMPORTANTE: Evita que la página se recargue 
 
     // Creamos el objeto Disco final
     const nuevoDisco: Disco = {
-      id: Date.now(), // Truco sucio: usamos la hora actual como ID único
+      id: Date.now(), // Truco: usamos la hora actual como ID único
       ...datos,      // Copiamos título, artista, etc.
       // Si no puso foto, ponemos una por defecto
       portada: datos.portada || 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/330px-12in-Vinyl-LP-Record-Angle.jpg' 
